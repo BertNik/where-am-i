@@ -1,0 +1,14 @@
+{
+  "name": "cms",
+  "version": "0.1.0",
+  "private": true,
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "scripts": {
+    "test": "",
+    "start": "node ./app.js",
+    "build": ""
+  }
+}
