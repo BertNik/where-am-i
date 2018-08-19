@@ -7,8 +7,7 @@
     "express": "^4.16.3"
   },
   "scripts": {
-    "test": "",
-    "start": "node ./app.js &",
-    "build": ""
+    "start": "node ./app.js & echo 'pid:'$!'\n' && echo $! > server.pid",
+    "stop" : "kill `cat server.pid` && (echo 'server process killed\n' && rm server.pid) || echo 'problem occured'"
   }
 }
