@@ -7,7 +7,7 @@
     "express": "^4.16.3"
   },
   "scripts": {
-    "start": "node ./app.js & echo 'pid:'$!'\n' && echo $! > server.pid",
+    "start": "node ./app.js & (echo 'pid:'$!' saved to server.pid\n\nUse \"npm run stop\" to terminate server.\n' && echo $! > server.pid)",
     "stop" : "kill `cat server.pid` && (echo 'server process killed\n' && rm server.pid) || echo 'problem occured'"
   }
 }
