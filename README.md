@@ -1,11 +1,12 @@
-Installation Instructions
-1. npm install
-2. npm run start 
+Installation Instructions (requires npm and nodejs to be installed)
+1. cd into directory
+2. npm install
+3. npm run start 
 
 Expected output:
-$ npm run start
+$ npm run start &
 
-> cms@0.1.0 start {filepath}/server
+> cms@0.1.0 start [filepath]/server
 > node ./app.js &
 
 

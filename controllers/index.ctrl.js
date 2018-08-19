@@ -18,7 +18,7 @@ module.exports = {
                         echoBody('error reading file\n');
                         return;
                     }
-                    //when files is read call back to returnResults
+                    //when file is read call back to returnResults
                     returnResult(data.split('\n'));
                 });
 
@@ -43,8 +43,6 @@ module.exports = {
 
                     try{
                         //javaScript is very finicky with types; this is an effort to ensure NaN is not returned
-                        //is the number negative? 
-                        //again, another peculiarity of javaScript
                         if(postParams.latitude.indexOf('-') !== -1){
                             postParams.latitude = postParams.latitude.substring(1,postParams.latitude.length);
                             lat = parseFloat(postParams.latitude);
@@ -109,6 +107,12 @@ module.exports = {
                 return inside;
                 
             }
+        }else{
+            res.send('');
         }
+        
+      },
+      wrongURL: (req,res,next) => {
+        res.send('')
       }
 }
